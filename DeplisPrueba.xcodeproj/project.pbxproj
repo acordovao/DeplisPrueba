@@ -23,13 +23,16 @@
 		D633A482291B54830062335C /* GenreReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D633A481291B54820062335C /* GenreReponse.swift */; };
 		D6805CBD291D9C2100A7BDD5 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6805CBB291D9C2100A7BDD5 /* MovieDetailViewController.swift */; };
 		D6805CBE291D9C2100A7BDD5 /* MovieDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6805CBC291D9C2100A7BDD5 /* MovieDetailViewController.xib */; };
-		D6805CC0291DABF700A7BDD5 /* MovieDetailModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6805CBF291DABF700A7BDD5 /* MovieDetailModal.swift */; };
+		D6805CC0291DABF700A7BDD5 /* MovieDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6805CBF291DABF700A7BDD5 /* MovieDetailModel.swift */; };
 		D6805CC3291DAE4500A7BDD5 /* CompanyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6805CC1291DAE4500A7BDD5 /* CompanyCollectionViewCell.swift */; };
 		D6805CC4291DAE4500A7BDD5 /* CompanyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6805CC2291DAE4500A7BDD5 /* CompanyCollectionViewCell.xib */; };
 		D6805CC7291DBA7400A7BDD5 /* ModalMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6805CC5291DBA7400A7BDD5 /* ModalMenuViewController.swift */; };
 		D6805CC8291DBA7400A7BDD5 /* ModalMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6805CC6291DBA7400A7BDD5 /* ModalMenuViewController.xib */; };
 		D6805CCB291DC0B800A7BDD5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6805CC9291DC0B800A7BDD5 /* ProfileViewController.swift */; };
 		D6805CCC291DC0B800A7BDD5 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6805CCA291DC0B800A7BDD5 /* ProfileViewController.xib */; };
+		D6805CD2291DC6CA00A7BDD5 /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6805CD1291DC6CA00A7BDD5 /* MovieDetailViewModel.swift */; };
+		D6805CDA291DCC0300A7BDD5 /* ModalLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6805CD8291DCC0300A7BDD5 /* ModalLoadingViewController.swift */; };
+		D6805CDB291DCC0300A7BDD5 /* ModalLoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6805CD9291DCC0300A7BDD5 /* ModalLoadingViewController.xib */; };
 		D689D17E291C9C2900FEDE4F /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D689D17C291C9C2900FEDE4F /* MovieCollectionViewCell.swift */; };
 		D689D17F291C9C2900FEDE4F /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D689D17D291C9C2900FEDE4F /* MovieCollectionViewCell.xib */; };
 		D6EE04ED291B5EC8000E8FA2 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EE04EC291B5EC8000E8FA2 /* MovieModel.swift */; };
@@ -54,13 +57,16 @@
 		D633A481291B54820062335C /* GenreReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreReponse.swift; sourceTree = "<group>"; };
 		D6805CBB291D9C2100A7BDD5 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		D6805CBC291D9C2100A7BDD5 /* MovieDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailViewController.xib; sourceTree = "<group>"; };
-		D6805CBF291DABF700A7BDD5 /* MovieDetailModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailModal.swift; sourceTree = "<group>"; };
+		D6805CBF291DABF700A7BDD5 /* MovieDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailModel.swift; sourceTree = "<group>"; };
 		D6805CC1291DAE4500A7BDD5 /* CompanyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyCollectionViewCell.swift; sourceTree = "<group>"; };
 		D6805CC2291DAE4500A7BDD5 /* CompanyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompanyCollectionViewCell.xib; sourceTree = "<group>"; };
 		D6805CC5291DBA7400A7BDD5 /* ModalMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalMenuViewController.swift; sourceTree = "<group>"; };
 		D6805CC6291DBA7400A7BDD5 /* ModalMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalMenuViewController.xib; sourceTree = "<group>"; };
 		D6805CC9291DC0B800A7BDD5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D6805CCA291DC0B800A7BDD5 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		D6805CD1291DC6CA00A7BDD5 /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
+		D6805CD8291DCC0300A7BDD5 /* ModalLoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalLoadingViewController.swift; sourceTree = "<group>"; };
+		D6805CD9291DCC0300A7BDD5 /* ModalLoadingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalLoadingViewController.xib; sourceTree = "<group>"; };
 		D689D17C291C9C2900FEDE4F /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		D689D17D291C9C2900FEDE4F /* MovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionViewCell.xib; sourceTree = "<group>"; };
 		D6EE04EC291B5EC8000E8FA2 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
@@ -112,6 +118,7 @@
 				0510A16D2919B9FA008F4BC4 /* Resourse */,
 				0510A1622919B533008F4BC4 /* Login */,
 				D6157B9E291D99FA002B1BB9 /* MovieDetail */,
+				D6805CD5291DCAD100A7BDD5 /* Profile */,
 				0510A1762919FE6B008F4BC4 /* Home */,
 			);
 			path = Aplication;
@@ -139,6 +146,7 @@
 		0510A16D2919B9FA008F4BC4 /* Resourse */ = {
 			isa = PBXGroup;
 			children = (
+				D6805CCD291DC3DA00A7BDD5 /* Components */,
 				0510A1582919B1BC008F4BC4 /* LaunchScreen.storyboard */,
 				0510A1562919B1BC008F4BC4 /* Assets.xcassets */,
 			);
@@ -176,12 +184,6 @@
 			children = (
 				0510A1782919FE83008F4BC4 /* HomeViewController.swift */,
 				0510A1792919FE83008F4BC4 /* HomeViewController.xib */,
-				D689D17C291C9C2900FEDE4F /* MovieCollectionViewCell.swift */,
-				D689D17D291C9C2900FEDE4F /* MovieCollectionViewCell.xib */,
-				D6805CC5291DBA7400A7BDD5 /* ModalMenuViewController.swift */,
-				D6805CC6291DBA7400A7BDD5 /* ModalMenuViewController.xib */,
-				D6805CC9291DC0B800A7BDD5 /* ProfileViewController.swift */,
-				D6805CCA291DC0B800A7BDD5 /* ProfileViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -197,21 +199,20 @@
 		D6157B9E291D99FA002B1BB9 /* MovieDetail */ = {
 			isa = PBXGroup;
 			children = (
-				D6157B9F291D9A08002B1BB9 /* view */,
-				D6805CBF291DABF700A7BDD5 /* MovieDetailModal.swift */,
+				D6805CCF291DC5B900A7BDD5 /* Model */,
+				D6805CD0291DC5D600A7BDD5 /* ViewModel */,
+				D6157B9F291D9A08002B1BB9 /* View */,
 			);
 			path = MovieDetail;
 			sourceTree = "<group>";
 		};
-		D6157B9F291D9A08002B1BB9 /* view */ = {
+		D6157B9F291D9A08002B1BB9 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				D6805CBB291D9C2100A7BDD5 /* MovieDetailViewController.swift */,
 				D6805CBC291D9C2100A7BDD5 /* MovieDetailViewController.xib */,
-				D6805CC1291DAE4500A7BDD5 /* CompanyCollectionViewCell.swift */,
-				D6805CC2291DAE4500A7BDD5 /* CompanyCollectionViewCell.xib */,
 			);
-			path = view;
+			path = View;
 			sourceTree = "<group>";
 		};
 		D633A480291B54710062335C /* Model */ = {
@@ -221,6 +222,86 @@
 				D6EE04EC291B5EC8000E8FA2 /* MovieModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D6805CCD291DC3DA00A7BDD5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D6805CD7291DCBEB00A7BDD5 /* ModalLoadingViewController */,
+				D6805CD4291DCAA000A7BDD5 /* ModalMenuViewController */,
+				D6805CD3291DCA6B00A7BDD5 /* MovieCollectionViewCell */,
+				D6805CCE291DC58C00A7BDD5 /* CompanyCollectionViewCell */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D6805CCE291DC58C00A7BDD5 /* CompanyCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				D6805CC1291DAE4500A7BDD5 /* CompanyCollectionViewCell.swift */,
+				D6805CC2291DAE4500A7BDD5 /* CompanyCollectionViewCell.xib */,
+			);
+			path = CompanyCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		D6805CCF291DC5B900A7BDD5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D6805CBF291DABF700A7BDD5 /* MovieDetailModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D6805CD0291DC5D600A7BDD5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D6805CD1291DC6CA00A7BDD5 /* MovieDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D6805CD3291DCA6B00A7BDD5 /* MovieCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				D689D17C291C9C2900FEDE4F /* MovieCollectionViewCell.swift */,
+				D689D17D291C9C2900FEDE4F /* MovieCollectionViewCell.xib */,
+			);
+			path = MovieCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		D6805CD4291DCAA000A7BDD5 /* ModalMenuViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D6805CC5291DBA7400A7BDD5 /* ModalMenuViewController.swift */,
+				D6805CC6291DBA7400A7BDD5 /* ModalMenuViewController.xib */,
+			);
+			path = ModalMenuViewController;
+			sourceTree = "<group>";
+		};
+		D6805CD5291DCAD100A7BDD5 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D6805CD6291DCADD00A7BDD5 /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		D6805CD6291DCADD00A7BDD5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D6805CC9291DC0B800A7BDD5 /* ProfileViewController.swift */,
+				D6805CCA291DC0B800A7BDD5 /* ProfileViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D6805CD7291DCBEB00A7BDD5 /* ModalLoadingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D6805CD8291DCC0300A7BDD5 /* ModalLoadingViewController.swift */,
+				D6805CD9291DCC0300A7BDD5 /* ModalLoadingViewController.xib */,
+			);
+			path = ModalLoadingViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +369,7 @@
 				0510A16C2919B5FA008F4BC4 /* LoginViewController.xib in Resources */,
 				0510A15A2919B1BC008F4BC4 /* LaunchScreen.storyboard in Resources */,
 				D6805CC8291DBA7400A7BDD5 /* ModalMenuViewController.xib in Resources */,
+				D6805CDB291DCC0300A7BDD5 /* ModalLoadingViewController.xib in Resources */,
 				0510A1572919B1BC008F4BC4 /* Assets.xcassets in Resources */,
 				0510A17B2919FE83008F4BC4 /* HomeViewController.xib in Resources */,
 			);
@@ -301,13 +383,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6EE04ED291B5EC8000E8FA2 /* MovieModel.swift in Sources */,
-				D6805CC0291DABF700A7BDD5 /* MovieDetailModal.swift in Sources */,
+				D6805CC0291DABF700A7BDD5 /* MovieDetailModel.swift in Sources */,
 				D6805CC3291DAE4500A7BDD5 /* CompanyCollectionViewCell.swift in Sources */,
+				D6805CDA291DCC0300A7BDD5 /* ModalLoadingViewController.swift in Sources */,
 				0510A1552919B1BB008F4BC4 /* DeplisPrueba.xcdatamodeld in Sources */,
 				0510A180291A0E0D008F4BC4 /* Extensions.swift in Sources */,
 				D689D17E291C9C2900FEDE4F /* MovieCollectionViewCell.swift in Sources */,
 				D6805CBD291D9C2100A7BDD5 /* MovieDetailViewController.swift in Sources */,
 				D6805CCB291DC0B800A7BDD5 /* ProfileViewController.swift in Sources */,
+				D6805CD2291DC6CA00A7BDD5 /* MovieDetailViewModel.swift in Sources */,
 				0510A14B2919B1BB008F4BC4 /* AppDelegate.swift in Sources */,
 				0510A1752919D9EA008F4BC4 /* LoginViewModel.swift in Sources */,
 				D6805CC7291DBA7400A7BDD5 /* ModalMenuViewController.swift in Sources */,

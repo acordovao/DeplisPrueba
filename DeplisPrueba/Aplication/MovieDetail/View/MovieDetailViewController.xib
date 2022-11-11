@@ -19,9 +19,9 @@
                 <outlet property="labelGenres" destination="kQF-Im-8H7" id="gOA-Wq-aHW"/>
                 <outlet property="labelOriginalTitle" destination="8DI-BY-aF9" id="sE5-X9-xXa"/>
                 <outlet property="labelPopuluty" destination="MJm-0i-uHx" id="7b7-Ii-Ih8"/>
+                <outlet property="labelRate" destination="keg-Us-3ZP" id="ZG7-WK-8ZJ"/>
                 <outlet property="labelRealseDate" destination="taS-1U-PeV" id="KnX-ik-oQt"/>
                 <outlet property="labelTitle" destination="7Ur-yM-4AC" id="Dm2-EE-r7W"/>
-                <outlet property="rate" destination="keg-Us-3ZP" id="BoU-Nh-ctK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

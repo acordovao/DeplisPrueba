@@ -18,14 +18,6 @@ extension Data {
     }
 }
 
-extension URLRequest {
-    func log() {
-        print("\(httpMethod ?? "") \(self)")
-        print("BODY \n \(httpBody?.toString())")
-        print("HEADERS \n \(allHTTPHeaderFields)")
-    }
-}
-
 extension UIImageView {
     
     func downloadedFrom(url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit, animated: Bool = false) {

@@ -10,34 +10,16 @@ import UIKit
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
-    
     @IBOutlet weak var uiCollectionMovie: UICollectionView!
     
     var generisResponse: GenreResponse?
     var movieReponse: MovieReponse?
+    var segments:  [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        uiCollectionMovie.register(UINib(nibName: "MovieCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: MovieCollectionViewCell.identifier)
-        
-        uiCollectionMovie.delegate = self
-        uiCollectionMovie.dataSource = self
-        uiCollectionMovie.collectionViewLayout = UICollectionViewFlowLayout()
-
-        
-        segmentedControl.removeAllSegments()
-        let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        segmentedControl.setTitleTextAttributes(titleTextAttributes, for:.normal)
-        segmentedControl.setTitleTextAttributes(titleTextAttributes, for:.selected)
-
-        
-        
-        
-        segmentedControl.addTarget(self, action: #selector(segmentedControlValueChanged(_:)), for: .valueChanged)
-        
-        var segments:  [String] = []
+        setupUI()
         
         ServiceCoordinator.getGenresn(completion: { generisResponse in
             
@@ -45,10 +27,10 @@ class HomeViewController: UIViewController {
                 
                 
                 generisResponse?.genres.forEach({ genre in
-                    segments.append(genre.name)
+                    self.segments.append(genre.name)
                 })
                 
-                for segment in segments {
+                for segment in self.segments {
                     self.segmentedControl.insertSegment(withTitle: segment, at: self.segmentedControl.numberOfSegments, animated: true)
                 }
                 
@@ -72,13 +54,23 @@ class HomeViewController: UIViewController {
             
         })
         
+        
+    }
+    
+    private func setupUI(){
+        uiCollectionMovie.register(UINib(nibName: "MovieCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: MovieCollectionViewCell.identifier)
+        
+        uiCollectionMovie.delegate = self
+        uiCollectionMovie.dataSource = self
+        uiCollectionMovie.collectionViewLayout = UICollectionViewFlowLayout()
 
         
+        segmentedControl.removeAllSegments()
+        let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        segmentedControl.setTitleTextAttributes(titleTextAttributes, for:.normal)
+        segmentedControl.setTitleTextAttributes(titleTextAttributes, for:.selected)
         
-        
-
-        
-        
+        segmentedControl.addTarget(self, action: #selector(segmentedControlValueChanged(_:)), for: .valueChanged)
     }
     
     @objc func segmentedControlValueChanged(_ sender: UISegmentedControl) {
@@ -92,8 +84,6 @@ class HomeViewController: UIViewController {
         }
         
     }
-    
-    
 
     @IBAction func onOptionsClicked(_ sender: Any) {
         

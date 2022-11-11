@@ -21,11 +21,16 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        textFieldUser.delegate = self
-        textFieldPassword.delegate = self
         
+        
+        setupUI()
         clearMessages()
         
+    }
+    
+    private func setupUI(){
+        textFieldUser.delegate = self
+        textFieldPassword.delegate = self
     }
 
     
@@ -33,6 +38,8 @@ class LoginViewController: UIViewController {
     @IBAction func loginCliked(_ sender: Any) {
         
         clearMessages()
+        
+        
         
         switch model.validInformation(user: textFieldUser.text, password: textFieldPassword.text){
             
@@ -45,9 +52,20 @@ class LoginViewController: UIViewController {
             labelErrorPassword.isHidden = false
         case .success:
             
+            let modal = ModalLoadingViewController(nibName: "ModalLoadingViewController", bundle: nil)
+            
+            modal.modalPresentationStyle = .overCurrentContext
+            modal.modalTransitionStyle = .crossDissolve
+            
+            
+            
+            self.navigationController?.present(modal, animated: true)
+            
             model.sendLoginUser(user: textFieldUser.text!, password: textFieldPassword.text!){ [weak self] reponse in
                 
                 DispatchQueue.main.async {
+                    
+                    self?.navigationController?.dismiss(animated: true)
                     
                     if reponse {
                         

@@ -17,7 +17,6 @@ class ModalMenuViewController: UIViewController {
     
     
     @IBOutlet weak var content: UIView!
-    
     @IBOutlet weak var bottonButton: UIButton!
     
     var delegate: ModalMenuViewControllerDelegate?

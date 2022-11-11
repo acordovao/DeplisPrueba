@@ -8,40 +8,50 @@
 import UIKit
 
 class MovieDetailViewController: UIViewController {
-    
-    public var information: Result?
-    
+
     @IBOutlet weak var imagePoster: UIImageView!
-    
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelOriginalTitle: UILabel!
-    
     @IBOutlet weak var labelRealseDate: UILabel!
     @IBOutlet weak var labelAdult: UILabel!
-    
-    @IBOutlet weak var rate: UILabel!
+    @IBOutlet var labelRate: UILabel!
     @IBOutlet weak var labelPopuluty: UILabel!
     @IBOutlet weak var labelGenres: UILabel!
     @IBOutlet weak var labelDescriptions: UILabel!
-    
     @IBOutlet weak var detailContent: UIView!
     @IBOutlet weak var collectionViewCompanies: UICollectionView!
-    var moreInformation: MovieDetailReponse?
+    
+    var information: Result?
+    var model = MovieDetailViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imagePoster.image = UIImage(named: "logo")
+        setupDetailInformation()
+        setupUI()
         
+    }
+    
+    private func setupDetailInformation(){
+        
+        imagePoster.image = UIImage(named: "logo")
         imagePoster.downloadedFrom(link:"http://image.tmdb.org/t/p/w500\(information?.backdropPath ?? "")", contentMode: .scaleToFill, animated: true)
         
         labelTitle.text = information?.title ?? "Sin titulo"
         labelOriginalTitle.text = "(\(information?.originalTitle ?? "Sin titulo original"))"
-        
-        
         labelAdult.text = (information?.adult ?? false) ? "Sí" : "No"
         labelRealseDate.text = information?.releaseDate ?? "Sin fecha de lanzamiento"
-        rate.text = "✭ \(information?.voteAverage ?? 0.0)"
+        labelRate.text = "✭ \(information?.voteAverage ?? 0.0)"
+        labelGenres.text = "Generos"
+        labelDescriptions.text = (information?.overview ?? "Sin descripcion").isEmpty ? "Sin descripcion" : (information?.overview ?? "Sin descripcion")
+        labelGenres.text = model.generesText
+
+        
+        model.getInformatio(id: information?.id)
+        
+    }
+    
+    private func setupUI(){
         
         detailContent.clipsToBounds = true
         detailContent.layer.cornerRadius = 12
@@ -51,39 +61,16 @@ class MovieDetailViewController: UIViewController {
         imagePoster.layer.cornerRadius = 12
         imagePoster.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
         
-        labelGenres.text = "Generos"
-        
-        labelDescriptions.text = (information?.overview ?? "Sin descripcion").isEmpty ? "Sin descripcion" : (information?.overview ?? "Sin descripcion")
-        
         
         collectionViewCompanies.register(UINib(nibName: "CompanyCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: CompanyCollectionViewCell.identifier)
-        
         collectionViewCompanies.dataSource = self
-        
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        
-        
         collectionViewCompanies.collectionViewLayout = layout
         
-        
-        ServiceCoordinator.getDetailMovie(movieID: String(information?.id ?? 0)){ movieDetailReponse in
-            
-
-            DispatchQueue.main.async {
-                self.moreInformation = movieDetailReponse
-                
-                var generesText = ""
-                
-                movieDetailReponse?.genres?.forEach({ genre in
-                    generesText += "\(genre.name), "
-                })
-                
-                self.labelGenres.text = generesText
-                
-                self.collectionViewCompanies.reloadData()
-            }
-            
+        model.updateList = { [weak self] in
+            self?.labelGenres.text = self?.model.generesText
+            self?.collectionViewCompanies.reloadData()
         }
         
     }
@@ -100,14 +87,14 @@ class MovieDetailViewController: UIViewController {
 extension MovieDetailViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return moreInformation?.productionCompanies?.count ?? 0
+        return model.productionCompanies?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CompanyCollectionViewCell.identifier, for: indexPath) as! CompanyCollectionViewCell
         
-        cell.setupInformation(information: moreInformation?.productionCompanies?[indexPath.row])
+        cell.setupInformation(information: model.productionCompanies?[indexPath.row])
         
         return cell
     }

@@ -14,11 +14,8 @@ class MovieCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var view: UIView!
     @IBOutlet weak var imagePoster: UIImageView!
     @IBOutlet weak var labelTitle: UILabel!
-    
     @IBOutlet weak var labelDate: UILabel!
-    
     @IBOutlet weak var labelRate: UILabel!
-    
     @IBOutlet weak var labelDescription: UILabel!
     
     public func setupInfo(info: Result?){
@@ -35,7 +32,6 @@ class MovieCollectionViewCell: UICollectionViewCell {
         labelRate.text = "✭ \(info?.voteAverage ?? 0.0)"
         labelDescription.text = (info?.overview ?? "Sin descripcion").isEmpty ? "Sin descripcion" : (info?.overview ?? "Sin descripcion")
         
-        
-        
     }
+    
 }

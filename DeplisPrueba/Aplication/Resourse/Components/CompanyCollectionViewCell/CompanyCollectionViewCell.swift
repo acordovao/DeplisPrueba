@@ -13,6 +13,7 @@ class CompanyCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var imagePoster: UIImageView!
     
+    
     public func setupInformation(information: ProductionCompany?){
         
         imagePoster.image = UIImage(named: "logo")
